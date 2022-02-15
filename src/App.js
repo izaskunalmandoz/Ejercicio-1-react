@@ -1,23 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
+import Input from './componentes/input';
+import Boton from './componentes/boton';
+import Result from './componentes/result';
+import { useState } from 'react';
 
 function App() {
+
+  const [numero, setNumero] = useState('');
+  const [multi, setMulti] = useState('');
+
+  const addNumero = (numero) => {
+    setNumero(numero);
+  };
+
+  const addMulti = (multi) => {
+    setMulti(multi);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input addNumero={addNumero} />
+      <Boton addMulti={addMulti} multi={multi} />
+      <Result numero={numero} multi={multi} />
     </div>
   );
 }

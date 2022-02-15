@@ -1,0 +1,26 @@
+.result {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    background-color: #278858;
+    text-align: center;
+    color: aliceblue;
+}
+
+.result_tit {
+    font-size: large;
+    padding: 1rem;
+}
+
+.result_numero {
+    gap: 1rem;
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 10rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5rem;
+}
